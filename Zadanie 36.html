@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wybór koloru</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .menu {
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+      width: 200px;
+      border: 2px solid #ccc;
+    }
+    .menu h1 {
+      color: green;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .menu li {
+      margin-bottom: 5px;
+    }
+    .menu li a {
+      display: block;
+      padding: 5px;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+    .menu li a.red {
+      color: red;
+      background-color: #ffe6e6;
+    }
+    .menu li a.blue {
+      color: blue;
+      background-color: #e6e6ff;
+    }
+    .input-container {
+      margin-top: 10px;
+    }
+    .input-container input {
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    .input-container button {
+      margin-top: 5px;
+      padding: 5px 10px;
+      border-radius: 3px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h1>MENU:</h1>
+    <ul>
+      <li><a class="red" href="#">1 - CZERWONY</a></li>
+      <li><a class="blue" href="#">2 - NIEBIESKI</a></li>
+    </ul>
+  </div>
+
+  <div class="input-container">
+    <input type="text" id="kolorInput" placeholder="Wprowadź wartość">
+    <button onclick="wybierzKolor()">Oblicz</button>
+  </div>
+
+  <script>
+    function wybierzKolor() {
+      let kolorInput = document.getElementById("kolorInput");
+      let kolor = kolorInput.value;
+
+      if (kolor === "1" || kolor.toLowerCase() === "czerwony") {
+        document.write("<p style='color: red;'>Wczytałeś kolor czerwony</p>");
+      } else if (kolor === "2" || kolor.toLowerCase() === "niebieski") {
+        document.write("<p style='color: blue;'>Wczytałeś kolor niebieski</p>");
+      } else {
+        document.write("Niepoprawny wybór koloru");
+      }
+    }
+  </script>
+</body>
+</html>
